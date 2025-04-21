@@ -42,13 +42,13 @@ const LocationToggle = ({
 );
 
 const WeddingCalendar = ({ ceremonyTime, highlightedDate }) => {
-  const isApril = highlightedDate === 30;
+  const isMay = true; // We're always showing May now
 
   return (
     <div className="relative border-2 border-rose-200 rounded-lg p-5 bg-white shadow-lg">
       <div className="absolute inset-0 border-8 border-double border-rose-100 rounded-lg pointer-events-none"></div>
       <h3 className="text-center font-serif text-2xl mb-3 text-rose-800 font-medium tracking-wide">
-        {isApril ? "April 2025" : "May 2025"}
+        May 2025
       </h3>
 
       <div className="bg-gradient-to-br from-white to-rose-50 p-3 rounded-md shadow-inner">
@@ -62,53 +62,18 @@ const WeddingCalendar = ({ ceremonyTime, highlightedDate }) => {
           <div className="font-medium text-gray-700">F</div>
           <div className="text-blue-600 font-medium">S</div>
 
-          {isApril ? (
-            <>
-              {/* April Calendar - Last Week */}
-              <div className="py-1 text-rose-600 text-sm">27</div>
-              <div className="py-1 text-gray-600 text-sm">28</div>
-              <div className="py-1 text-gray-600 text-sm">29</div>
-
-              {/* Highlighted Ceremony Date with Heart */}
-              <div className="py-1 relative">
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <svg
-                    className="h-12 w-12 text-rose-500 opacity-85"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                  </svg>
-                </div>
-                <span className="relative inline-flex items-center justify-center h-9 w-9 text-white text-xl font-bold z-10">
-                  30
-                </span>
-              </div>
-
-              {/* May days - slightly blurred */}
-              <div className="py-1 text-gray-600 text-sm opacity-60">1</div>
-              <div className="py-1 text-gray-600 text-sm opacity-60">2</div>
-              <div className="py-1 text-gray-600 text-sm opacity-60">3</div>
-
-              {/* May First Week - slightly blurred */}
-              <div className="py-1 text-rose-600 text-sm opacity-60">4</div>
-              <div className="py-1 text-gray-600 text-sm opacity-60">5</div>
-              <div className="py-1 text-gray-600 text-sm opacity-60">6</div>
-              <div className="py-1 text-gray-600 text-sm opacity-60">7</div>
-              <div className="py-1 text-gray-600 text-sm opacity-60">8</div>
-              <div className="py-1 text-gray-600 text-sm opacity-60">9</div>
-              <div className="py-1 text-blue-600 text-sm opacity-60">10</div>
-            </>
-          ) : (
-            <>
-              {/* May Calendar Dates - Week 1 */}
-              <div className="py-1 text-rose-600 text-sm opacity-40">27</div>
-              <div className="py-1 text-gray-600 text-sm opacity-40">28</div>
-              <div className="py-1 text-gray-600 text-sm opacity-40">29</div>
-              <div className="py-1 text-gray-600 text-sm opacity-40">30</div>
-
-              {/* Highlighted Ceremony Date with Heart */}
-              <div className="py-1 relative">
+          {/* May Calendar Dates - Week 1 */}
+          <div className="py-1 text-rose-600 text-sm opacity-40">27</div>
+          <div className="py-1 text-gray-600 text-sm opacity-40">28</div>
+          <div className="py-1 text-gray-600 text-sm opacity-40">29</div>
+          <div className="py-1 text-gray-600 text-sm opacity-40">30</div>
+          <div
+            className={`py-1 relative ${
+              highlightedDate === 1 ? "" : "text-gray-600 text-sm"
+            }`}
+          >
+            {highlightedDate === 1 ? (
+              <>
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                   <svg
                     className="h-12 w-12 text-rose-500 opacity-85"
@@ -121,21 +86,45 @@ const WeddingCalendar = ({ ceremonyTime, highlightedDate }) => {
                 <span className="relative inline-flex items-center justify-center h-9 w-9 text-white text-2xl font-bold z-10">
                   1
                 </span>
-              </div>
+              </>
+            ) : (
+              "1"
+            )}
+          </div>
+          <div className="py-1 text-gray-600 text-sm">2</div>
+          <div className="py-1 text-blue-600 text-sm">3</div>
 
-              <div className="py-1 text-gray-600 text-sm">2</div>
-              <div className="py-1 text-blue-600 text-sm">3</div>
-
-              {/* Calendar Dates - Week 2 */}
-              <div className="py-1 text-rose-600 text-sm">4</div>
-              <div className="py-1 text-gray-600 text-sm">5</div>
-              <div className="py-1 text-gray-600 text-sm">6</div>
-              <div className="py-1 text-gray-600 text-sm">7</div>
-              <div className="py-1 text-gray-600 text-sm">8</div>
-              <div className="py-1 text-gray-600 text-sm">9</div>
-              <div className="py-1 text-blue-600 text-sm">10</div>
-            </>
-          )}
+          {/* Calendar Dates - Week 2 with highlighted date */}
+          <div
+            className={`py-1 relative ${
+              highlightedDate === 4 ? "" : "text-rose-600 text-sm"
+            }`}
+          >
+            {highlightedDate === 4 ? (
+              <>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <svg
+                    className="h-12 w-12 text-rose-500 opacity-85"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                  </svg>
+                </div>
+                <span className="relative inline-flex items-center justify-center h-9 w-9 text-white text-2xl font-bold z-10">
+                  4
+                </span>
+              </>
+            ) : (
+              "4"
+            )}
+          </div>
+          <div className="py-1 text-gray-600 text-sm">5</div>
+          <div className="py-1 text-gray-600 text-sm">6</div>
+          <div className="py-1 text-gray-600 text-sm">7</div>
+          <div className="py-1 text-gray-600 text-sm">8</div>
+          <div className="py-1 text-gray-600 text-sm">9</div>
+          <div className="py-1 text-blue-600 text-sm">10</div>
         </div>
       </div>
     </div>
@@ -200,24 +189,24 @@ const VenueSection = ({
   venueDescription = "Sự hiện diện của quý khách là lời chúc hạnh phúc và ý nghĩa nhất với hai bên gia đình.",
   ceremonyTimeGroom = "10:00 AM",
   ceremonyTimeBride = "10:30 AM",
-  groomLocation = " Xóm 4, Trực Đại, Trực Ninh, Nam Định",
-  groomLocationMap = "Gốc bàng, Xóm 4, Trực Đại, Trực Ninh, Nam Định",
-  brideLocation = "Nhà bà Thịnh số nhà 14/11/48 đường Tô Hiến Thành- phường Trường Thi, TP Nam Định",
-  brideLocationMap = "Trường THCS Lý Tự Trọng,Tô Hiến Thành, Trường Thi, Nam Định",
+  groomLocation = " Đội 1, Thuỷ Thành Giao Châu Giao Thuỷ Nam Định",
+  groomLocationMap = "Đội 1, Thuỷ Thành Giao Châu Giao Thuỷ Nam Định",
+  brideLocation = "Thôn Trà Đông, xã Tân Minh, huyện Tiên Lãng, TP Hải Phòng",
+  brideLocationMap = "Thôn Trà Đông, xã Tân Minh, huyện Tiên Lãng, TP Hải Phòng",
   mapApiKey = "AIzaSyDFhsUtcRITpol9dDD3CMGPmoBKLYr1VQY", // Should be moved to env variables
 }: VenueSectionProps) => {
-  const [currentLocation, setCurrentLocation] = useState(groomLocation);
+  const [currentLocation, setCurrentLocation] = useState(brideLocation);
   const [currentLocationMap, setCurrentLocationMap] =
-    useState(groomLocationMap);
-  const [highlightedDate, setHighlightedDate] = useState(1); // Default to May 1st (groom)
+    useState(brideLocationMap);
+  const [highlightedDate, setHighlightedDate] = useState(4); // Default to May 4 (bride)
   const [currentCeremonyTime, setCurrentCeremonyTime] =
-    useState(ceremonyTimeGroom);
+    useState(ceremonyTimeBride);
 
   const handleLocationChange = (location: string) => {
     setCurrentLocation(location);
     // Update highlighted date based on location
     const isBrideLocation = location === brideLocation;
-    setHighlightedDate(isBrideLocation ? 30 : 1);
+    setHighlightedDate(isBrideLocation ? 4 : 1);
     // Update ceremony time based on location
     setCurrentCeremonyTime(
       isBrideLocation ? ceremonyTimeBride : ceremonyTimeGroom

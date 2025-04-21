@@ -97,11 +97,11 @@ const GiftModal = ({ isOpen, onClose }: GiftModalProps) => {
                   <div
                     className="w-56 h-56 mx-auto border p-1 cursor-pointer hover:border-blue-500 transition-all"
                     onClick={() =>
-                      handleImageClick("/images/gallery/maqrTung.JPG")
+                      handleImageClick("/images/gallery/maqrTungsssss.JPG")
                     }
                   >
                     <img
-                      src="/images/gallery/maqrTung.JPG"
+                      src="/images/gallery/maqrTungsssss.JPG"
                       alt="QR Code for Groom"
                       className="w-full h-full object-contain"
                     />
@@ -112,12 +112,13 @@ const GiftModal = ({ isOpen, onClose }: GiftModalProps) => {
                       Ngân hàng: <span className="font-bold">Vietcombank</span>
                     </p>
                     <p className="text-lg">
-                      Tên tài khoản:{" "}
-                      <span className="font-bold">PHAM DUC TUNG</span>
+                      Tên tài khoản: <span className="font-bold">VUONG</span>
                     </p>
                     <p className="text-lg flex items-center">
                       Số tài khoản:{" "}
-                      <span className="font-bold mr-2">9865307195</span>
+                      <span className="font-bold mr-2">
+                        00000000000000000000
+                      </span>
                       <button
                         className="text-blue-500 hover:text-blue-700 focus:outline-none relative"
                         onClick={() => copyToClipboard("9865307195", "groom")}
@@ -172,15 +173,15 @@ const GiftModal = ({ isOpen, onClose }: GiftModalProps) => {
 
                   <div className="space-y-2 text-left w-full">
                     <p className="text-lg">
-                      Ngân hàng: <span className="font-bold">Techcombank</span>
+                      Ngân hàng: <span className="font-bold">MB Bank</span>
                     </p>
                     <p className="text-lg">
                       Tên tài khoản:{" "}
-                      <span className="font-bold">TRAN PHUONG THAO</span>
+                      <span className="font-bold">NGUYEN THI HUE</span>
                     </p>
                     <p className="text-lg flex items-center">
                       Số tài khoản:{" "}
-                      <span className="font-bold mr-2">19036067848018</span>
+                      <span className="font-bold mr-2">0834661615</span>
                       <button
                         className="text-pink-500 hover:text-pink-700 focus:outline-none relative"
                         onClick={() =>

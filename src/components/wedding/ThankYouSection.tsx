@@ -8,7 +8,7 @@ interface ThankYouSectionProps {
 
 const ThankYouSection = ({
   title = "Thank You!",
-  names = "Đức Tùng & Phương Thảo",
+  names = "Vương & Huệ",
   backgroundImage = "https://images.unsplash.com/photo-1522748906645-95d8adfd52c7?w=1920&q=80",
 }: ThankYouSectionProps) => {
   return (

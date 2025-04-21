@@ -157,8 +157,8 @@ const TimelineItem = ({ date, title, description, isLast = false }) => (
 const Couples = ({
   title = "Couples",
   brideGroomInfo = {
-    brideName: "Phương Thảo",
-    groomName: "Đức Tùng",
+    brideName: "Huệ",
+    groomName: "Vương",
     brideImage: "/images/gallery/photo8.jpg",
     groomImage: "/images/gallery/photo7.jpg",
     coupleStory: [
