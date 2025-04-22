@@ -113,8 +113,8 @@ const LoadingPage: React.FC<LoadingPageProps> = ({ onProgressComplete }) => {
             }}
             style={{
               backgroundImage: isMobile
-                ? "url('/images/gallery/photo100.jpg')"
-                : "url('/images/gallery/photo110.jpg')",
+                ? "url('/images/gallery/photo10.jpg')"
+                : "url('/images/gallery/photo10.jpg')",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}

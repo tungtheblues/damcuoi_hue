@@ -95,33 +95,34 @@ const GiftModal = ({ isOpen, onClose }: GiftModalProps) => {
                 </p>
                 <div className="flex flex-col items-center space-y-6">
                   <div
-                    className="w-56 h-56 mx-auto border p-1 cursor-pointer hover:border-blue-500 transition-all"
+                    className="w-56 h-56 mx-auto border p-1 cursor-pointer hover:border-pink-500 transition-all"
                     onClick={() =>
-                      handleImageClick("/images/gallery/maqrTungsssss.JPG")
+                      handleImageClick("/images/gallery/maqrThao.jpg")
                     }
                   >
                     <img
-                      src="/images/gallery/maqrTungsssss.JPG"
-                      alt="QR Code for Groom"
+                      src="/images/gallery/maqrThao.jpg"
+                      alt="QR Code for Bride"
                       className="w-full h-full object-contain"
                     />
                   </div>
 
                   <div className="space-y-2 text-left w-full">
                     <p className="text-lg">
-                      Ngân hàng: <span className="font-bold">Vietcombank</span>
+                      Ngân hàng: <span className="font-bold">MB Bank</span>
                     </p>
                     <p className="text-lg">
-                      Tên tài khoản: <span className="font-bold">VUONG</span>
+                      Tên tài khoản:{" "}
+                      <span className="font-bold">NGUYEN THI HUE</span>
                     </p>
                     <p className="text-lg flex items-center">
                       Số tài khoản:{" "}
-                      <span className="font-bold mr-2">
-                        00000000000000000000
-                      </span>
+                      <span className="font-bold mr-2">0834661615</span>
                       <button
-                        className="text-blue-500 hover:text-blue-700 focus:outline-none relative"
-                        onClick={() => copyToClipboard("9865307195", "groom")}
+                        className="text-pink-500 hover:text-pink-700 focus:outline-none relative"
+                        onClick={() =>
+                          copyToClipboard("19036067848018", "bride")
+                        }
                         aria-label="Copy account number"
                       >
                         <svg
@@ -138,7 +139,7 @@ const GiftModal = ({ isOpen, onClose }: GiftModalProps) => {
                             d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
                           />
                         </svg>
-                        {copiedText === "groom" && (
+                        {copiedText === "bride" && (
                           <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded">
                             Copied!
                           </span>
