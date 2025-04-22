@@ -184,7 +184,7 @@ const Header = ({
               className={`font-serif text-2xl md:text-3xl transition-colors flex items-center
               ${isScrolled ? "text-rose-600" : "text-white"}`}
             >
-              <span className="relative z-10">T💖T</span>
+              <span className="relative z-10">V💖H</span>
               <span
                 className={`absolute -bottom-1 left-0 right-0 h-0.5 bg-current transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100 
                 ${isScrolled ? "bg-rose-300" : "bg-white/60"}`}
